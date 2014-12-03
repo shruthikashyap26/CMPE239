@@ -14,4 +14,6 @@ public interface ILyricsExtractor {
 	
 	public void getLyrics(String artist, String song) throws IOException;
 
+	public String getRawLyrics(String artist, String song);
+
 }

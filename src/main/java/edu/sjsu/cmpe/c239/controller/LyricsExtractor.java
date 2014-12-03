@@ -52,4 +52,10 @@ public class LyricsExtractor {
 		return "Lyrics Saved";
 	}
 	
+	@RequestMapping(value="/getRawLyrics", method=RequestMethod.GET)
+	public @ResponseBody String getRawLyrics(@RequestParam String artist, @RequestParam String song) {
+		String rawLyrics = "";
+		rawLyrics = lyricsExtractor.getRawLyrics(artist, song);
+		return rawLyrics;
+	}
 }
